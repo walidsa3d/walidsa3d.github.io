@@ -1,0 +1,42 @@
+
+/* POSTS */
+
+#post {
+    position: relative;
+
+}
+
+#post .meta {
+    position:absolute; 
+    left:-80px; 
+    top: 10px; 
+    width:0px;
+}
+
+#post .meta div {
+    width: 100px;
+}
+
+#post .meta .date {
+    font-family: "Courier", monospace;
+    font-weight: bold;
+}
+
+#post .meta .date span {
+    display:block;
+}
+
+#post .meta .date span.day {
+    font-size: 2.4em;
+    letter-spacing: -2px;
+    margin-left: -2px;
+}
+
+#post .meta .date span.month {
+    font-size: 1.4em;
+    margin-bottom: -5px;
+}
+
+#post .meta .date span.year {
+
+}
