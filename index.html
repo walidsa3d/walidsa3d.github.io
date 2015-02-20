@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html ng-app="ResumeApp">
 <head>
  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
  <title>Home- Walid Saad</title>
  <meta name="author" content="Walid Saad" />
- <link href="atom.xml" rel="alternate" title="Walid's blog" type="application/atom+xml" />
-
  <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
  <link rel="stylesheet" type="text/css" href="css/julienvey.css" />
@@ -17,9 +15,12 @@
  <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
  <script type="text/javascript" src="js/bootstrap.min.js"></script>
  <script type="text/javascript" src="js/prettify/prettify.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/angular-route.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/routes.js"></script>
+  <script src="scripts/controllers.js"></script>
 
-<script type="text/javascript">
-</script>
 </head>
 <body onload="prettyPrint()">
 
@@ -30,10 +31,10 @@
       </div>
       <div class="container">
         <ul class="nav pull-left">
-          <li  ><a href="index.html"><i class="icon-home"></i> Home</a></li>
-          <li  ><a href="publications.html"><i class="icon-pencil"></i> Downloads</a></li>
-          <li  ><a href="projects.html"><i class="icon-wrench"></i> Projects</a></li>
-          <li   ><a href="cv.html"><i class="icon-file"></i>Resume</a></li>
+          <li  ><a href="#home"><i class="icon-home"></i> Home</a></li>
+          <li  ><a href="#downloads"><i class="icon-pencil"></i> Downloads</a></li>
+          <li  ><a href="#projects"><i class="icon-wrench"></i> Projects</a></li>
+          <li   ><a href="#cv"><i class="icon-file"></i>Resume</a></li>
           </ul>
         <ul class="nav social pull-right">
           <li><a href="https://twitter.com/walidsa3d" class="icon-twitter icon"></a></li>
@@ -45,59 +46,7 @@
   </div>
 
   <div class="container">
-    <div class="hero-unit intro">
-    <img src="images/face160.jpg" class="pull-left faceImage img-circle"/>
-    <p class="text">I'm basically a Java/JEE developer, but I coded in Python and PHP, and developed an Android Application.
-      Thus, I'm a polymath, passionate about technology and open to new opportunities.</p>
-</div>
-
-
-
-
-<div class="justify">
-    <p class="lead">Follow Me</p>
-
-<div class="row">
-    <div class="span1">
-        <a href="http://twitter.com/walidsa3d"><img class="well" src="assets/img/twitter.png" alt="Twitter"></a>
-    </div>
-    <div class="span9" style="margin-left:60px">
-        <p class="lead">My tweets, they're not professional at all</p>
-        <p class="lead"><a href="http://twitter.com/walidsa3d">Twitter</a></p>
-    </div>
-</div>
-<div class="row">
-    <div class="span1">
-        <a href="https://github.com/walidsa3d"><img class="well" src="assets/img/octocat.png" alt="Github"></a>
-    </div>
-    <div class="span9" style="margin-left:60px">
-        <p class="lead">My projects, code snippets and open source contributions</p>
-        <p class="lead"><a href="https://github.com/walidsa3d">Github</a></p>
-    </div>
-</div>
-<div class="row">
-    <div class="span1">
-        <a href="https://speakerdeck.com/walidsa3d"><img class="well" src="assets/img/speakerdeck-60.png" alt="Speaker Deck"></a>
-    </div>
-    <div class="span9" style="margin-left:60px">
-        <p class="lead">My Presentations</p>
-        <p class="lead"><a href="https://speakerdeck.com/walidsa3d">Speaker Deck</a></p>
-    </div>
-</div>
-<div class="row">
-    <div class="span1">
-        <a href="http://linkedin.com/in/walidsa3d"><img class="well" src="assets/img/linkedin.png" alt="Lanyrd"></a>
-    </div>
-    <div class="span9" style="margin-left:60px">
-        <p class="lead">My not-so-developed LinkedIn profile</p>
-        <p class="lead"><a href="http://linkedin.com/in/walidsa3d">LinkedIn</a></p>
-    </div>
-</div>
-
-
-</div>
-
-
+<ng-view></ng-view>
 
   </div>
 
@@ -106,9 +55,9 @@
       <h4 class="title">Find Me</h4>
       <p class="pull-right"><a href="apropos.html#" class="top">Top</a></p>
       <ul class="footer-links">
-        <li><a href="https://twitter.com/julienvey">Twitter</a></li>
-        <li><a href="https://github.com/julienvey">Github</a></li>
-        <li><a href="http://www.linkedin.com/in/julienvey">LinkedIn</a></li>
+        <li><a href="https://twitter.com/walidsa3d">Twitter</a></li>
+        <li><a href="https://github.com/walidsa3d">Github</a></li>
+        <li><a href="http://www.linkedin.com/in/walidsa3d">LinkedIn</a></li>
       </ul>
     </div>
   </footer>
