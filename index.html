@@ -17,10 +17,14 @@
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
+        <link href="css/simple.css" rel="stylesheet">
+
      <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
  <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angular-animate.min.js"></script>
+
   <script src="scripts/app.js"></script>
   <script src="scripts/routes.js"></script>
   <script src="scripts/factories.js"></script>
@@ -87,8 +91,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-<ng-view></ng-view> 
-                    </div>
+                     <div ng-view class="flip"></div>
+<!-- <ng-view class ="view-slide-in"></ng-view> 
+ -->                    </div>
                 </div>
             </div>
         </div>

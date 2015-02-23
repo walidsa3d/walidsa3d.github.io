@@ -1,3 +1,4 @@
+<h1>My Github Repos</h1>
 <table class="table table-bordered table-condensed">
         <head>
                 <tr>
@@ -9,7 +10,10 @@
         <body>
                 <tr ng-repeat="repo in repos|filter:{'fork':false}|orderBy:'language'">
                         <td><a href={{repo.html_url}}>{{repo.name}}</a></td>
-                        <td>{{repo.language}}</td>
+                        <td><span ng-class="{ 'label label-warning'   : repo.language === 'Java',
+                          'label label-success' : repo.language === 'Python',
+                          'label label-info'    : repo.language ==='JavaScript',
+                           'label label-danger'    : repo.language ==='Shell'}">{{repo.language}}</span></td>
                         <td>{{repo.description}}</td>
                 </tr>
         </body>

@@ -1,42 +1,21 @@
-
-/* POSTS */
-
-#post {
-    position: relative;
-
+.content {
+  -webkit-transition: -webkit-transform 1s;
+  -webkit-perspective: 600px;
 }
-
-#post .meta {
-    position:absolute; 
-    left:-80px; 
-    top: 10px; 
-    width:0px;
+.content .flip {
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 1s ease-in-out;
 }
-
-#post .meta div {
-    width: 100px;
+.content .flip.ng-enter {
+    -webkit-transform: rotateY(-180deg);
 }
-
-#post .meta .date {
-    font-family: "Courier", monospace;
-    font-weight: bold;
+.content .flip.ng-enter-active {
+  -webkit-transform: rotateY(0deg);
 }
-
-#post .meta .date span {
-    display:block;
+.content .flip.ng-leave {
+  -webkit-transform: rotateY(0deg);
 }
-
-#post .meta .date span.day {
-    font-size: 2.4em;
-    letter-spacing: -2px;
-    margin-left: -2px;
-}
-
-#post .meta .date span.month {
-    font-size: 1.4em;
-    margin-bottom: -5px;
-}
-
-#post .meta .date span.year {
-
+.content .flip.ng-leave-active {
+  -webkit-transform: rotateY(180deg);
 }

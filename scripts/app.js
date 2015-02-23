@@ -1,2 +1,2 @@
-var myAppModule=angular.module('ResumeApp', ['ngRoute']);
+var myAppModule=angular.module('ResumeApp', ['ngRoute','ngAnimate']);
 
