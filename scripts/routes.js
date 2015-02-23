@@ -5,5 +5,7 @@ myAppModule.config(['$routeProvider', function($routeProvider) {
 	when("/downloads", {templateUrl: "partials/downloads.html", controller: "ResumeCtrl"}).
 	when("/projects", {templateUrl: "partials/projects.html", controller: "ResumeCtrl"}).
 	when("/home", {templateUrl: "partials/home.html", controller: "ResumeCtrl"}).
+	when("/github", {templateUrl: "partials/github.html", controller: "DataCtrl"}).
+	when("/blog", {templateUrl: "partials/blogfeed.html", controller: "FeedCtrl"}).
 	otherwise({redirectTo: '/'});
 }]);
