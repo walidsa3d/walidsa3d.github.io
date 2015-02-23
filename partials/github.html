@@ -4,16 +4,13 @@
                         <th>Name</th>
                         <th>Language</th>
                         <th>Description</th>
-                        <th>URL</th>
                 </tr>
         </head>
         <body>
                 <tr ng-repeat="repo in repos|filter:{'fork':false}|orderBy:'language'">
-                        <td>{{repo.name}}</td>
+                        <td><a href={{repo.html_url}}>{{repo.name}}</a></td>
                         <td>{{repo.language}}</td>
                         <td>{{repo.description}}</td>
-                        <td>{{repo.html_url}}</td>
-
                 </tr>
         </body>
 </table>

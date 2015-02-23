@@ -5,7 +5,7 @@ myAppModule.controller('DataCtrl', ['$scope','$http',function($scope,$http){
    $scope.status;
     $scope.repos;
 
-  $http.get('https://api.github.com/users/walidsa3d/repos')
+  $http.get('https://api.github.com/users/walidsa3d/repos?type=created')
         .success(function(data) {
           $scope.repos=data;
             console.log('Success '+data);
@@ -26,7 +26,10 @@ myAppModule.controller("FeedCtrl", ['$scope', 'FeedService', function ($scope, F
     }
     $scope.loadFeed();
 }]);
-
+myAppModule.controller("GitCtrl", ['$scope', 'GitService', function ($scope, Git) {
+    Git.success(function(data) { 
+    $scope.repos = data;
+})}]);
 myAppModule.factory('FeedService', ['$http', function ($http) {
     return {
         parseFeed: function (url) {
@@ -34,3 +37,15 @@ myAppModule.factory('FeedService', ['$http', function ($http) {
         }
     }
 }]);
+
+
+
+
+
+
+
+
+
+
+
+
