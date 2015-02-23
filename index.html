@@ -1,20 +1,24 @@
+
 <!DOCTYPE html>
-<html ng-app="ResumeApp">
+<html lang="en" ng-app="ResumeApp">
+
 <head>
- <meta http-equiv="content-type" content="text/html; charset=utf-8" />
- <title>Walid Saad</title>
- <meta name="author" content="Walid Saad" />
- <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
- <link rel="stylesheet" type="text/css" href="css/julienvey.css" />
- <link rel="stylesheet" type="text/css" href="css/simple.css" />
- <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
- <link rel="stylesheet" type="text/css" href="js/prettify/prettify.css">
- <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
- <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
- <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Walid Saad</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
  <script type="text/javascript" src="js/bootstrap.min.js"></script>
- <script type="text/javascript" src="js/prettify/prettify.js"></script>
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/angular-route.min.js"></script>
   <script src="scripts/app.js"></script>
@@ -22,48 +26,75 @@
   <script src="scripts/factories.js"></script>
   <script src="scripts/controllers.js"></script>
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
-<body onload="prettyPrint()">
 
-  <div class="navbar navbar-static-top banner">
-    <div class="navbar-inner">
-      <div class="container">
-        <span class="brand"><a href="index.html"><h1>Walid Saad</h1></a></span>
-      </div>
-      <div class="container">
-        <ul class="nav pull-left">
-          <li><a href="#home"><i class="icon-home"></i> Home</a></li>
-          <li><a href="#projects"><i class="icon-wrench"></i> Projects</a></li>
-          <li><a href="#cv"><i class="icon-file"></i>Resume</a></li>
-          <li><a href="#github"><i class="icon-pencil"></i>Github</a></li>
-          <li><a href="#blog"><i class="icon-pencil"></i>Blog</a></li>
-          <li><a href="#downloads"><i class="icon-pencil"></i> Downloads</a></li>
-          </ul>
-        <ul class="nav social pull-right">
-          <li><a href="https://twitter.com/walidsa3d" class="icon-twitter icon"></a></li>
-          <li><a href="https://github.com/walidsa3d" class="icon-github icon"></a></li>
-          <li><a href="http://linkedin.com/in/walidsa3d/" class="icon-linkedin icon"></a></li>
-        </ul>
-      </div>
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#home">
+                        <h1>Walid Saad</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#skills">Technical Skills</a>
+                </li>
+                                <li>
+                    <a href="#languages">Languages</a>
+                </li>
+                                <li>
+                    <a href="#internships">Internships</a>
+                </li>
+                                </li>
+                                <li>
+                    <a href="#education">Education</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+
+                <li>
+                    <a href="#github">Github</a>
+                </li>
+                <li>
+                    <a href="#blog">Blog</a>
+                </li>
+                <li>
+                    <a href="#downloads">Downloads</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+<ng-view></ng-view> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
     </div>
-  </div>
-
-  <div class="container">
-<ng-view></ng-view>
-
-  </div>
-
-  <footer class="footer">
-    <div class="container">
-      <h4 class="title">Find Me</h4>
-      <p class="pull-right"><a href="apropos.html#" class="top">Top</a></p>
-      <ul class="footer-links">
-        <li><a href="https://twitter.com/walidsa3d">Twitter</a></li>
-        <li><a href="https://github.com/walidsa3d">Github</a></li>
-        <li><a href="http://www.linkedin.com/in/walidsa3d">LinkedIn</a></li>
-      </ul>
-    </div>
-  </footer>
 </body>
+
 </html>
