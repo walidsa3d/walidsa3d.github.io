@@ -18,17 +18,23 @@ myAppModule.controller('DataCtrl', ['$scope','$http',function($scope,$http){
 );
 myAppModule.controller("FeedCtrl", ['$scope', 'FeedService', function ($scope, Feed) {
 	$scope.feedurl='https://capsianblog.wordpress.com/feed/';
+        $scope.loading=true;
+
     $scope.loadFeed = function () {
         Feed.parseFeed($scope.feedurl).then(function (res) {
             $scope.feeds = res.data.responseData.feed.entries;
+                $scope.loading=false;
+
         });
 
     }
     $scope.loadFeed();
 }]);
 myAppModule.controller("GitCtrl", ['$scope', 'GitService', function ($scope, Git) {
+    $scope.loading=true;
     Git.success(function(data) { 
     $scope.repos = data;
+    $scope.loading=false;
 })}]);
 myAppModule.factory('FeedService', ['$http', function ($http) {
     return {

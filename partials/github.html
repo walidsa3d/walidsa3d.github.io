@@ -1,5 +1,8 @@
 <h1>My Github Repos</h1>
-<table class="table table-bordered table-condensed">
+<div ng-show="loading">
+<img src="assets/img/loader.gif" alt="">
+</div>
+<table class="table table-bordered table-condensed" ng-show="!loading">
         <head>
                 <tr>
                         <th>Name</th>

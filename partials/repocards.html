@@ -1,0 +1,18 @@
+  <div class="row">
+    </p>
+    <hr>
+    <section id="pinBoot">
+
+      <article c ng-repeat="repo in repos|filter:{'fork':false}|orderBy:'language'"><img src="assets/img/octocat.png" alt="">
+        <h4><a href="#">{{repo.name}}</a></h4>
+        <p>{{repo.description}}</p>
+      </article>
+
+    </section>
+
+
+    <hr>
+
+
+</div>
+

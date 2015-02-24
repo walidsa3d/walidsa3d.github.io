@@ -1,6 +1,9 @@
 
 <h1>My Blog Feed</h1>
-<ul>
+<div ng-show="loading">
+<img src="assets/img/loader.gif" alt="">
+</div>
+<ul ng-show="!loading">
   <li ng-repeat="feed in feeds">
     <h5><a href="{{feed.link}}" target="_blank">{{feed.title}}</a></h5>
     <p class="text-left">{{feed.contentSnippet}}</p>
