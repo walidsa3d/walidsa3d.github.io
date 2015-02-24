@@ -11,5 +11,6 @@ myAppModule.config(['$routeProvider', function($routeProvider) {
 	when("/internships", {templateUrl: "partials/internships.html", controller: "ResumeCtrl"}).
 	when("/education", {templateUrl: "partials/education.html", controller: "ResumeCtrl"}).
 	when("/blog", {templateUrl: "partials/blogfeed.html", controller: "FeedCtrl"}).
+	when("/chart", {templateUrl: "partials/chart.html", controller: "ExCtrl"}).
 	otherwise({redirectTo: '/home'});
 }]);
