@@ -18,72 +18,19 @@ myAppModule.controller('DataCtrl', ['$scope','$http',function($scope,$http){
 );
 myAppModule.controller("FeedCtrl", ['$scope', 'FeedService', function ($scope, Feed) {
 	$scope.feedurl='https://capsianblog.wordpress.com/feed/';
-        $scope.loading=true;
-
     $scope.loadFeed = function () {
         Feed.parseFeed($scope.feedurl).then(function (res) {
             $scope.feeds = res.data.responseData.feed.entries;
-                $scope.loading=false;
-
         });
 
     }
     $scope.loadFeed();
 }]);
 myAppModule.controller("GitCtrl", ['$scope', 'GitService', function ($scope, Git) {
-    $scope.loading=true;
     Git.success(function(data) { 
     $scope.repos = data;
-    $scope.loading=false;
 })}]);
-myAppModule.factory('FeedService', ['$http', function ($http) {
-    return {
-        parseFeed: function (url) {
-            return $http.jsonp('//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
-        }
-    }
-}]);
-myAppModule.controller('ExCtrl', function ($scope) {
- $scope.options = {
-            chart: {
-                type: 'pieChart',
-                height: 500,
-                x: function(d){return d.key;},
-                y: function(d){return d.y;},
-                showLabels: true,
-                transitionDuration: 500,
-                labelThreshold: 0.01,
-                legend: {
-                    margin: {
-                        top: 5,
-                        right: 35,
-                        bottom: 5,
-                        left: 0
-                    }
-                }
-            }
-        };
 
-        $scope.data = [
-            {
-                key: "Java",
-                y: 5
-            },
-            {
-                key: "Python",
-                y: 2
-            },
-            {
-                key: "JavaScript",
-                y: 9
-            },
-            {
-                key: "Shell",
-                y: 7
-            }
-        ];
-
-});
 
 
 

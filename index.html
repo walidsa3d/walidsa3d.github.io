@@ -14,12 +14,12 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+<!-- <link href="css/style.min.css" rel="stylesheet">
+ -->    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-        <link href="css/simple.css" rel="stylesheet">
-
-     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<!-- <link href="css/simple-sidebar.css" rel="stylesheet">
+ --> <link href="css/simple.css" rel="stylesheet">
+      <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
  <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/angular-route.min.js"></script>
@@ -39,26 +39,23 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
 
-    <div id="wrapper">
+    <div id="wrapper" class="active">
           
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#home">
-                        <h1>Walid Saad</h1>
-                    </a>
+              <ul id="sidebar_menu" class="sidebar-nav">
+            <li class="side_name sidebar_name active visible-lg visible-md"><p>Walid Saad</p></li>
+      </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                <li>
+                    <a href="#home" onmouseover="this.click()">Home</a>
                 </li>
                 <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#skills" onmouseover="this.click()">Technical Skills</a>
+                    <a href="#skills" onmouseover="this.click()">Skills<span class="sub_icon glyphicon glyphicon-link"></span></a>
                 </li>
                                 <li>
                     <a href="#languages" onmouseover="this.click()">Languages</a>
@@ -95,7 +92,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                
-                     <div ng-view class="flip"></div>
+                     <div ng-view></div>
 <!-- <ng-view class ="view-slide-in"></ng-view> 
  -->                    </div>
                 </div>
@@ -104,7 +101,6 @@
         <!-- /#page-content-wrapper -->
 
     </div>
-
 </body>
 
 </html>
