@@ -1,6 +1,6 @@
 
 myAppModule.factory('GitService', ['$http', function ($http) {
-return $http.get('https://api.github.com/users/walidsa3d/repos?type=created');
+return $http.get('https://api.github.com/users/walidsa3d/repos?per_page=100&type=created');
 
 }]);
 myAppModule.factory('FeedService', ['$http', function ($http) {
